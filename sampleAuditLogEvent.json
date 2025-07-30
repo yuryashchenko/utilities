@@ -1,0 +1,182 @@
+{
+    "id": "Entitlement Management_xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx_5VKVA_22107498",
+    "category": "EntitlementManagement",
+    "correlationId": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+    "result": "success",
+    "resultReason": null,
+    "activityDisplayName": "User requests access package assignment",
+    "activityDateTime": "2025-07-30T13:19:49.294648Z",
+    "loggedByService": "Entitlement Management",
+    "operationType": "CreateEntitlementGrantUserAddRequest",
+    "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/138.0.0.0 Safari/537.36 Edg/138.0.0.0",
+    "initiatedBy": {
+        "app": null,
+        "linkableIdentifiers": null,
+        "user": {
+            "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+            "displayName": "John Doe",
+            "userPrincipalName": "john.doe@example.com",
+            "ipAddress": null,
+            "userType": null,
+            "homeTenantId": null,
+            "homeTenantName": null
+        }
+    },
+    "targetResources": [
+        {
+            "id": "aaaaaaaa-aaaa-aaaa-aaaa-aaaaaaaaaaaa",
+            "displayName": "",
+            "type": "AccessPackageAssignmentRequest",
+            "userPrincipalName": null,
+            "groupType": null,
+            "modifiedProperties": [
+                {
+                    "displayName": "Justification",
+                    "oldValue": "\"\"",
+                    "newValue": "\"Business justification text\""
+                },
+                {
+                    "displayName": "TargetType",
+                    "oldValue": "\"\"",
+                    "newValue": "\"User\""
+                },
+                {
+                    "displayName": "TargetDisplayName",
+                    "oldValue": "\"\"",
+                    "newValue": "\"John Doe\""
+                },
+                {
+                    "displayName": "TargetId",
+                    "oldValue": "\"\"",
+                    "newValue": "\"xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx\""
+                },
+                {
+                    "displayName": "TargetUserType",
+                    "oldValue": "\"\"",
+                    "newValue": "\"Guest\""
+                },
+                {
+                    "displayName": "IsDeleted",
+                    "oldValue": "\"\"",
+                    "newValue": "\"False\""
+                },
+                {
+                    "displayName": "RequestState",
+                    "oldValue": "\"\"",
+                    "newValue": "\"Submitted\""
+                },
+                {
+                    "displayName": "RequestStatus",
+                    "oldValue": "\"\"",
+                    "newValue": "\"Accepted\""
+                }
+            ]
+        },
+        {
+            "id": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx",
+            "displayName": "John Doe",
+            "type": "User",
+            "userPrincipalName": null,
+            "groupType": null,
+            "modifiedProperties": []
+        },
+        {
+            "id": "yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy",
+            "displayName": "EXAMPLE_ORG",
+            "type": "Directory",
+            "userPrincipalName": null,
+            "groupType": null,
+            "modifiedProperties": []
+        },
+        {
+            "id": "zzzzzzzz-zzzz-zzzz-zzzz-zzzzzzzzzzzz",
+            "displayName": "example.com",
+            "type": "Other",
+            "userPrincipalName": null,
+            "groupType": null,
+            "modifiedProperties": []
+        },
+        {
+            "id": "00000000-0000-0000-0000-000000000000",
+            "displayName": "",
+            "type": "AccessPackageAssignment",
+            "userPrincipalName": null,
+            "groupType": null,
+            "modifiedProperties": []
+        },
+        {
+            "id": "bbbbbbbb-bbbb-bbbb-bbbb-bbbbbbbbbbbb",
+            "displayName": "SamplePackage",
+            "type": "AccessPackage",
+            "userPrincipalName": null,
+            "groupType": null,
+            "modifiedProperties": []
+        },
+        {
+            "id": "cccccccc-cccc-cccc-cccc-cccccccccccc",
+            "displayName": "General",
+            "type": "AccessPackageCatalog",
+            "userPrincipalName": null,
+            "groupType": null,
+            "modifiedProperties": []
+        },
+        {
+            "id": "dddddddd-dddd-dddd-dddd-dddddddddddd",
+            "displayName": "Initial Policy",
+            "type": "AccessPackageAssignmentPolicy",
+            "userPrincipalName": null,
+            "groupType": null,
+            "modifiedProperties": []
+        }
+    ],
+    "additionalDetails": [
+        {
+            "key": "GovernanceLicenseFeatureUsed",
+            "value": "True"
+        },
+        {
+            "key": "Justification",
+            "value": "Business justification text"
+        },
+        {
+            "key": "TargetType",
+            "value": "User"
+        },
+        {
+            "key": "TargetDisplayName",
+            "value": "John Doe"
+        },
+        {
+            "key": "TargetId",
+            "value": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+        },
+        {
+            "key": "TargetUserType",
+            "value": "Guest"
+        },
+        {
+            "key": "IsDeleted",
+            "value": "False"
+        },
+        {
+            "key": "RequestState",
+            "value": "Submitted"
+        },
+        {
+            "key": "RequestStatus",
+            "value": "Accepted"
+        },
+        {
+            "key": "tid",
+            "value": "yyyyyyyy-yyyy-yyyy-yyyy-yyyyyyyyyyyy"
+        },
+        {
+            "key": "oid",
+            "value": "xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx"
+        },
+        {
+            "key": "ipaddr",
+            "value": "192.168.1.100"
+        }
+    ]
+}

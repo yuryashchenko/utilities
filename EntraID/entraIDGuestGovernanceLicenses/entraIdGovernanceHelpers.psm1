@@ -148,9 +148,6 @@ $AuditLogCmdlet = if ($UseStandardModules) { "Get-MgAuditLogDirectoryAudit" } el
             Write-Host "  - $Issue" -ForegroundColor Red
         }
         
-        
-        
-        # Ask user if they want to continue despite issues
         $Response = Read-Host "`nDo you want to continue despite module issues? (y/N)"
         if ($Response -ne 'y' -and $Response -ne 'Y') {
             Write-Host "Script execution aborted by user." -ForegroundColor Red

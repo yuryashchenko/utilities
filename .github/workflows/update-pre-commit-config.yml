@@ -1,0 +1,38 @@
+name: Sync Pre-commit Config
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.pre-commit-config.yaml'
+  workflow_dispatch:
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v4
+
+      - name: Generate GitHub App Token
+        id: generate-token
+        uses: peter-murray/workflow-application-token-action@v4
+        with:
+          application_id: ${{ secrets.GH_APP_ID }}
+          application_private_key: ${{ secrets.GH_APP_SECRET }}
+          organization: ACME-ORG
+          revoke_token: true
+      
+      - name: Run GitHub File Sync
+        uses: BetaHuhn/repo-file-sync-action@v1
+        with:
+          GH_INSTALLATION_TOKEN: ${{ steps.generate-token.outputs.token }}
+          #PR_BODY: "✅ This PR updates the pre-commit configuration to match the latest version from the central repository."
+          SKIP_PR: true
+          CONFIG_PATH: .github/pre-commit-sync-config.yml
+          #PR_LABELS: 'pre-commit-config'
+          COMMIT_BODY: "Automated sync of pre-commit config from centralized storage in the central-config repository"
+          BRANCH_PREFIX: 'fix/ACME-1234/pre-commit-update'
+          DRY_RUN: false
+ 

@@ -1,0 +1,38 @@
+# Sync pre-commit configuration to target repositories
+# Add your target repositories below
+
+# Example: sync to specific repositories
+# your-org/repo-name:
+#   - .pre-commit-config.yaml
+
+# Example: sync to multiple repositories
+# your-org/repo1:
+#   - .pre-commit-config.yaml
+# your-org/repo2:
+#   - .pre-commit-config.yaml
+
+group:
+  repos: |
+    ACME-ORG/infrastructure-loyalty
+    ACME-ORG/onboarding-loyalty
+    ACME-ORG/onboarding-aerlingus
+    ACME-ORG/onboarding-group
+    ACME-ORG/infrastructure-cargo
+    ACME-ORG/infrastructure
+    ACME-ORG/onboarding-cargo
+    ACME-ORG/infrastructure-gbs
+    ACME-ORG/infrastructure-aerlingus
+    ACME-ORG/onboarding-gbs
+    ACME-ORG/bulk-member-imports
+    ACME-ORG/tf-monitoring
+    ACME-ORG/azure-function-apps
+    ACME-ORG/onboarding-modules
+    ACME-ORG/tf-entra
+    ACME-ORG/tf-sentinel
+    ACME-ORG/onboarding-self-service
+    ACME-ORG/tf-b2b
+    ACME-ORG/onboarding-workflows
+    ACME-ORG/PAWS-Config
+  files: 
+    - source: .pre-commit-config.yaml
+      dest: .pre-commit-config.yaml

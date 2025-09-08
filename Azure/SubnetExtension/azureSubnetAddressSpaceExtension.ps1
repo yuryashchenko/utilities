@@ -1,7 +1,7 @@
 $tenantID = "<your-tenant-id>"
 Connect-AzAccount -tenant $tenantID
 
-$rgName = "myResourceGroup1"
+$rgName = "myResourceGroup10"
 $location = "eastus"
 $vnetName = "myVNet1"
 
@@ -73,7 +73,7 @@ $pe2 = New-AzPrivateEndpoint -ResourceGroupName $rgName -Name "pe2" -Location $l
 
 
 # Extending address space for subnet1 and subnet3
-Set-AzVirtualNetworkSubnetConfig -Name "mySubnet1" -VirtualNetwork $Network1 -AddressPrefix '10.0.0.0/24', '10.0.2.0/24'
+Set-AzVirtualNetworkSubnetConfig -Name "mySubnet1" -VirtualNetwork $Network1 -AddressPrefix '10.0.0.0/24', '10.0.2.0/24' -ServiceEndpoint @('Microsoft.Storage','Microsoft.Sql')
 $Network1 | Set-AzVirtualNetwork
-Set-AzVirtualNetworkSubnetConfig -Name "mySubnet3" -VirtualNetwork $Network2 -AddressPrefix '172.16.0.0/24', '172.16.2.0/24'
+Set-AzVirtualNetworkSubnetConfig -Name "mySubnet3" -VirtualNetwork $Network2 -AddressPrefix '172.16.0.0/24', '172.16.2.0/24' -ServiceEndpoint @('Microsoft.Storage','Microsoft.Sql')
 $Network2 | Set-AzVirtualNetwork

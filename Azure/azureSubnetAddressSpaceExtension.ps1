@@ -2,7 +2,7 @@ $tenantID = "<your-tenant-id>"
 Connect-AzAccount -tenant $tenantID
 
 $rgName = "myResourceGroup1"
-$location = "EastUS"
+$location = "eastus"
 $vnetName = "myVNet1"
 
 # Create a resource group
